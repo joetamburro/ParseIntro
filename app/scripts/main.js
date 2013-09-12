@@ -1,5 +1,95 @@
 Parse.initialize("2d2HFcgSbV0ofwbDQlEFmuwV5zhW3rDy19vBIz6J", "uxlqLGhxwBkpRoOYTxmz5EAwxAjD47VDHyqRltE3");
 
+$(document).ready(function(){
+  $('.task-title').hide()
+  $('.task-content').hide()
+})
+
+$(document).ready(function(){
+  $('.new').click(function(){
+  $('.task-title').show()
+  $('.task-content').show()
+  })
+})
+
+  var TaskClass = Parse.object.extend("Task");
+
+  var TaskCollectionClass = Parse.Collection.extend({
+    model: TaskClass
+  });
+
+  var tasks = new TaskCollectionClass()
+
+  tasks.fetch({
+    success: function(collection) {
+      collection.each(function(note){
+        addToSideBar(note)
+      })
+    }
+  })
+
+$('.new').click(function(){
+  var task = new TaskClass();
+  task.set()
+
+})
+
+
+// masons code from class
+
+// var NoteClass = Parse.Object.extend("Note");
+ 
+// var NoteCollectionClass = Parse.Collection.extend({
+//   model: NoteClass
+// });
+ 
+// // create an instance of the collection
+// var notes = new NoteCollectionClass()
+ 
+// notes.fetch({
+//   success: function(collection) {
+//     collection.each(function(note){
+//       addToSideBar(note)
+//     })
+//   }
+// })
+ 
+// $('.save').click(function(){
+//   var note = new NoteClass();
+//   note.set('title', $('#title').val());
+//   note.set('content', $('#content').val());
+ 
+//   note.save(null, {
+//     success: function(result){
+//       addToSideBar(result)
+//     },
+//     error: function(result, error){
+//       alert("DAMMIT, "+ error.description)
+//     }
+//   })
+// })
+ 
+// // functions 
+ 
+// function addToSideBar(note) {
+//   var li = $('<li>'+note.get('title')+'</li>')
+//   $('.notes').append(li)
+//   li.click(function(){
+//     renderNote(note)
+//   })
+// }
+ 
+// function renderNote(note) {
+//   $('#title').val( note.get('title') )
+//   $('#content').val( note.get('content') )
+// }
+// end of masons code from class
+
+
+
+
+
+
 
 
 

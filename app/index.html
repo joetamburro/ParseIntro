@@ -24,40 +24,55 @@
         <div class="container">
             <div class="header">
                 
-                <h3 class="text-muted"><span class="fan">FAN</span>TASK<span class="fan">IT</span></h3>
+                <h3 class="text-muted">FAN<span class="task-font">TASK</span>IT</span></h3>
             </div>
 
             <div class="row">
                 <div class="col-md-4 sidebar">
                     <button type="button" class="btn btn-default btn-block new">New Task<span class="glyphicon glyphicon-pencil"></span></button>
- 
-                    <ul class="notes"></ul>
+                    <p>---TASKS---</p>
+                        <div class="task-list">
+                            <ul>
+
+                            </ul>
+                        </div>
+                    
                 </div>
  
                 <div class="col-md-5 main">
+
+                    <h1>TASK</h1>
+                    
+                    <input class="task-title" type="text" placeholder="Enter your task title here!">
+                    <input class="task-content" type="text" placeholder="Enter any pertinent details here!">
+
+                    
                     <!-- Post form -->
-                    <form class="form-horizontal form" role="form">
+                    <!-- <form class="form-horizontal form" role="form"> -->
                       <!-- title -->
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="title" class="col-lg-2 control-label">Task</label>
                         <div class="col-lg-10">
                           <input type="email" class="form-control" id="title" placeholder="Task title">
                         </div>
-                      </div>
+                      </div> -->
  
                       <!-- content  -->
-                      <div class="form-group">
+                     <!--  <div class="form-group">
                         <label for="content" class="col-lg-2 control-label">Description</label>
                         <div class="col-lg-10">
                           <textarea id="content" class="form-control" placeholder="Your post goes here..."></textarea>
                         </div>
                       </div>
-                    </form>
+                    </form> -->
  
                 </div>
  
                 <div class="col-md-3 actions">
+                   <!--  <img src="images/diamond-plate.jpg"> -->
                     <button type="submit" class="btn btn-default btn-block save">Save</button>
+                    <button type="submit" class="btn btn-default btn-block edit">Edit</button>
+                    <button type="submit" class="btn btn-default btn-block delete">Delete</button>
                 </div>
             </div>
             <!-- <div class="jumbotron">
