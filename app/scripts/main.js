@@ -12,27 +12,45 @@ $(document).ready(function(){
   })
 })
 
-  var TaskClass = Parse.object.extend("Task");
+var TaskClass = Parse.Object.extend("Task");
 
-  var TaskCollectionClass = Parse.Collection.extend({
-    model: TaskClass
-  });
+var TaskCollectionClass = Parse.Collection.extend({
+  model: TaskClass
+})
 
-  var tasks = new TaskCollectionClass()
+var tasks = new TaskCollectionClass()
 
-  tasks.fetch({
-    success: function(collection) {
-      collection.each(function(note){
-        addToSideBar(note)
-      })
+tasks.fetch({
+  success: function(collection){
+    collection.each(function(task){
+      addToSideBar(task)
+    })
+  }
+})
+
+$('.save').click(function(){
+  var task = new TaskClass();
+  task.set('title', $('#title').val());
+  task.set('content', $('#content').val());
+
+  task.save(null, {
+    success: function(result){
+      addToSideBar(result)
+    },
+    error: function(result, error){
+      alert("NOPE, " + error.description)
     }
   })
-
-$('.new').click(function(){
-  var task = new TaskClass();
-  task.set()
-
 })
+
+function addToSideBar(task) {
+  var li = $('<li>'+task.get('title')+'</li>')
+  $('.tasklist').append(li)
+  li.click(function(){
+    renderNote(task)
+  })
+}
+
 
 
 // masons code from class
@@ -43,7 +61,7 @@ $('.new').click(function(){
 //   model: NoteClass
 // });
  
-// // create an instance of the collection
+// create an instance of the collection
 // var notes = new NoteCollectionClass()
  
 // notes.fetch({

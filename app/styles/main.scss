@@ -99,33 +99,65 @@ body {
 
 /*joe's styles*/
 
-.new, .new:hover {
-    background-color: #227FC9;
-    color: #FFF;
-    border-color: #5B92E4;
-}
+
 
 .task-font {
     font-weight: 200;
 }
 
-.save, .save:hover {
+.task-view {
+    height: 150px; 
+    width: 100%;
+}
+
+.tasklist {
+    color: #A8240B;
+    margin-left: -20px;
+}
+
+.new {
+    background-color: #227FC9;
+    color: #FFF;
+    border-color: #5B92E4;
+}
+
+.new:hover {
+    background-color: #84B5DB;
+    color: #FFFFFF;
+}
+
+.save {
     margin-top: 50px;
     background-color: #227FC9;
     color: #FFF;
     border-color: #5B92E4;
 }
 
-.edit, .edit:hover {
+.save:hover {
+    background-color: #84B5DB;
+    color: #FFFFFF;
+}
+
+.edit {
     margin-top: 30px;
     background-color: #227FC9;
     color: #FFF;
     border-color: #5B92E4;
 }
 
-.delete, .delete:hover {
+.edit:hover {
+    background-color: #84B5DB;
+    color: #FFFFFF;
+}
+
+.delete, {
     margin-top: 30px;
-    background-color: #E01414;
+    background-color: #227FC9;
+    color: #fff;
+}
+
+.delete:hover{
+    background-color: #E01414; 
     color: #fff;
 }
 
