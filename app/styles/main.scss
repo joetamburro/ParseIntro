@@ -98,7 +98,9 @@ body {
 }
 
 /*joe's styles*/
-
+input[placeholder] {
+    vertical-align: bottom;
+}
 
 
 .task-font {
@@ -115,8 +117,12 @@ body {
     margin-left: -20px;
 }
 
+.tasklist:hover {
+    text-decoration: underline;
+}
+
 .new {
-    background-color: #227FC9;
+    background-color: #3FA4F3;
     color: #FFF;
     border-color: #5B92E4;
 }
@@ -128,7 +134,7 @@ body {
 
 .save {
     margin-top: 50px;
-    background-color: #227FC9;
+    background-color: #3FA4F3;
     color: #FFF;
     border-color: #5B92E4;
 }
@@ -140,7 +146,7 @@ body {
 
 .edit {
     margin-top: 30px;
-    background-color: #227FC9;
+    background-color: #3FA4F3;
     color: #FFF;
     border-color: #5B92E4;
 }
@@ -152,7 +158,7 @@ body {
 
 .delete, {
     margin-top: 30px;
-    background-color: #227FC9;
+    background-color: #3FA4F3;
     color: #fff;
 }
 
@@ -232,6 +238,11 @@ body {
 }
 #content {
     height: 160px;
+    padding: 0px 0px 125px 5px;
+}
+
+#title {
+    padding-left: 5px;
 }
 
 .glyphicon-pencil {
