@@ -2,7 +2,7 @@ Parse.initialize("2d2HFcgSbV0ofwbDQlEFmuwV5zhW3rDy19vBIz6J", "uxlqLGhxwBkpRoOYTx
 
 $(document).ready(function(){
   $('.text-muted').hide()
-  $('.text-muted').slideDown(1200)
+  $('.text-muted').slideDown(1000)
 });
 
 $(document).ready(function(){
@@ -12,10 +12,14 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.new').click(function(){
-  $('.task-title').show().val('')
-  $('.task-content').show().val('')
-  input
+    $('.task-title').show().val('')
+    $('.task-content').show().val('')
  })
+})
+
+$(document).ready(function(){
+  $('.row').hide()
+  $('.row').slideDown(2000)
 })
 
 
@@ -52,6 +56,10 @@ $('.save').click(function(){
   })
 })
 
+$('.edit').click(function(){
+
+})
+
 function addToSideBar(task) {
   var li = $('<li>'+task.get('title')+'</li>')
   $('.tasklist').append(li)
@@ -65,24 +73,29 @@ function renderNote(task) {
   $('#content').val( task.get('content') )
 }
 
-$('.delete').click(function(){
-    // After this, the playerName field will be empty
-  task.unset("task-title");
-  task.unset("task-content");
- 
-// Saves the field deletion to the Parse Cloud
-  task.save();
 
-  task.destroy({
-  success: function(task) {
-    // The object was deleted from the Parse Cloud.
-  },
-  error: function(task, error) {
-    // The delete failed.
-    // error is a Parse.Error with an error code and description.
-    }
-  });
-})
+// function addToMainTitle(task){
+//   var titleView = $('<h3>'+task.get('title')+'</h3>')
+//   $('.main').append(titleView)
+  
+
+// }
+// function addToContentView(task) {
+//   var h3 = $('<h3>'+task.get('title')+'</h3>')
+//   $('.content-view').append(h3)
+//   h3.click(function(){
+//     renderTask(task)
+//   })
+// }
+
+// function renderTask(task) {
+//   $('#title-view').val( task.get('title') )
+//   $('#content-view').val( task.get('content') )
+// }
+
+// $('.delete').click(function(){
+
+// })
 
 // $('.delete').click(function(){
 //   task.destroy({

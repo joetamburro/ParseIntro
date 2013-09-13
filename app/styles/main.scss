@@ -117,8 +117,9 @@ input[placeholder] {
     margin-left: -20px;
 }
 
-.tasklist:hover {
+.tasklist li:hover {
     text-decoration: underline;
+    zoom: 120%;
 }
 
 .new {
