@@ -113,8 +113,12 @@ input[placeholder] {
 }
 
 .tasklist {
-    color: #A8240B;
+    color: #BB6E60;
     margin-left: -20px;
+}
+
+.task-view {
+  pointer-events: none;
 }
 
 .tasklist li:hover {
